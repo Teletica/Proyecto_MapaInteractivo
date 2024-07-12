@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F1DEDE;
+    display: flex; /* This styles will make the map centered, as well as responsive. */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+svg path{
+    fill: #3DA974; /* Default fill color of the overall map. */
+    stroke: white;
+    stroke-width: .50;
+}
+
+svg path:hover{
+    fill: #169873; /* Default fill color of a provinced when being hovered by user. */
+    transition: 0.3s; /* The moment cursor hovers over province, hover fill color will be displayed in 0.3s */
+    cursor: pointer;
+}
+
+.water {
+    fill: #6CCFF6; /* Default fill color for 'Laguna Arenal'. */
+}
+
+.water:hover {
+    fill: #4392F1; /* Default fill color for 'Laguna Arenal' when being hovered by user. */
+}

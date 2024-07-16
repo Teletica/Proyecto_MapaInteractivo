@@ -21,7 +21,7 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="/CSS/style.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/CSS/style.css">
 </head>
 
 <body>
@@ -67,8 +67,6 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
-
-                         <!-- Esto es la redireccion dentro de la misma pagina si quieren agregar otra mas me dicen-->
                         <a href="login.html" class="nav-item nav-link active">Login</a>
                         <a href="Destianation.html" class="nav-item nav-link">Destinos</a>
                         <a href="Services.html" class="nav-item nav-link">Servicios</a>
@@ -96,8 +94,7 @@
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                     <!-- Imaganes para el carrusel es solo una pero se pueden mas -->
-                    <img class="w-100" src="/Imgs/Travels-Mejorada.jpeg" alt="Image">
+                    <img class="w-100" src="Imgs/Travels-Mejorada.jpeg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
@@ -107,11 +104,11 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="/Imgs/MapaMejorado.jpeg" alt="Image">
+                    <img class="w-100" src="Imgs/MapaMejorado.jpeg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
-                            <h1 class="display-3 text-white mb-md-4">Fomentar el turismo es fomentar nustra historia como pais!</h1>
+                            <h1 class="display-3 text-white mb-md-4">Fomentar el turismo es fomentar nuestra historia como pais!</h1>
                             <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
                         </div>
                     </div>
@@ -142,23 +139,19 @@
                                     <select class="custom-select px-4" style="height: 47px;">
                                         <option selected>Destination</option>
                                         <option value="1">Destination 1</option>
-                                        <option value="2">Destination 1</option>
-                                        <option value="3">Destination 1</option>
+                                        <option value="2">Destination 2</option>
+                                        <option value="3">Destination 3</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
-                                    </div>
+                                <div class="date mb-3 mb-md-0">
+                                    <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
-                                    </div>
+                                <div class="date mb-3 mb-md-0">
+                                    <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -166,15 +159,15 @@
                                     <select class="custom-select px-4" style="height: 47px;">
                                         <option selected>Duration</option>
                                         <option value="1">Duration 1</option>
-                                        <option value="2">Duration 1</option>
-                                        <option value="3">Duration 1</option>
+                                        <option value="2">Duration 2</option>
+                                        <option value="3">Duration 3</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
+                        <a href="" class="btn btn-primary btn-block" style="height: 47px;">Submit</a>
                     </div>
                 </div>
             </div>
@@ -183,101 +176,111 @@
     <!-- Booking End -->
 
 
-     <!-- About Start -->
-     <div class="container-fluid py-5">
-        <div class="container pt-5">
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Sobre nosotros</h6>
+                <h1>Todo lo que necesitas saber sobre nosotros</h1>
+            </div>
             <div class="row">
-                <div class="col-lg-6" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="/Imgs/Nosotros.jpeg" style="object-fit: cover;">
-                    </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4 class="text-uppercase mb-3"><i class="fa fa-laptop-code text-primary mr-3"></i>Our Mission</h4>
+                    <p>Nuestro principal objetivo es el brindarle al turista la mejor de las experiencias con nuestros servicios y nuestra asistencia siempre que la necesite!</p>
                 </div>
-                <div class="col-lg-6 pt-5 pb-lg-5">
-                    <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
-                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Us</h6>
-                        <h1 class="mb-3">Nosotros le ofrecemos una experiencia mejorada en nuestro bello pais Costa Rica</h1>
-                        <p> Conocemos nuestro pais y queremos darle la mejor experiencia posible, mediante este mapa interactivo que guie su visita y le muestre diferentes curiosidades y nuestra hisotria, ademas de ofrecerle toda la informacion sobre playas y mas lugares de hospedaje</p>
-                        <div class="row mb-4">
-                            <div class="col-6">
-                                <img class="img-fluid" src="img/about-1.jpg" alt="">
-                            </div>
-                            <div class="col-6">
-                                <img class="img-fluid" src="img/about-2.jpg" alt="">
-                            </div>
-                        </div>
-                        <a href="" class="btn btn-primary mt-1">Ir a mapa interactivo</a>
-                    </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4 class="text-uppercase mb-3"><i class="fa fa-award text-primary mr-3"></i>Our Vision</h4>
+                    <p>Convertirnos en la empresa de turismo más importante y confiable a nivel nacional e internacional.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4 class="text-uppercase mb-3"><i class="fa fa-users-cog text-primary mr-3"></i>Our Team</h4>
+                    <p>Contamos con un equipo de profesionales capacitados para ofrecerte la mejor experiencia en tu viaje.</p>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
-     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
-        <div class="row pt-5">
-            <div class="col-lg-3 col-md-6 mb-5">
-                <a href="" class="navbar-brand">
-                    <h1 class="text-primary"><span class="text-white">TRAVEL</span>ER</h1>
-                </a>
-                <p>Sed ipsum clita tempor ipsum ipsum amet sit ipsum lorem amet labore rebum lorem ipsum dolor. No sed vero lorem dolor dolor</p>
-                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
-                <div class="d-flex justify-content-start">
-                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-light pb-5">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex">
+                        <i class="fa fa-2x fa-map-marker-alt text-primary flex-shrink-0 mr-3"></i>
+                        <div>
+                            <h4 class="text-uppercase mb-3">Destinos</h4>
+                            <p>Ofrecemos una amplia variedad de destinos para que elijas tu próximo destino.</p>
+                            <a class="text-primary text-uppercase" href="">Saber más<i class="fa fa-angle-right ml-2"></i></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex">
+                        <i class="fa fa-2x fa-heart text-primary flex-shrink-0 mr-3"></i>
+                        <div>
+                            <h4 class="text-uppercase mb-3">Servicios</h4>
+                            <p>Brindamos una variedad de servicios para que tu experiencia sea la mejor.</p>
+                            <a class="text-primary text-uppercase" href="">Saber más<i class="fa fa-angle-right ml-2"></i></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Usefull Links</h5>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Destination</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Packages</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guides</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonial</a>
-                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
-                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Newsletter</h6>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary px-3">Sign Up</button>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex">
+                        <i class="fa fa-2x fa-users text-primary flex-shrink-0 mr-3"></i>
+                        <div>
+                            <h4 class="text-uppercase mb-3">Nuestro equipo</h4>
+                            <p>Un equipo de profesionales siempre dispuesto a ayudarte en tu viaje.</p>
+                            <a class="text-primary text-uppercase" href="">Saber más<i class="fa fa-angle-right ml-2"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-        <div class="row">
-            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white-50">Copyright &copy; <a href="#">Domain</a>. All Rights Reserved.</a>
-                </p>
+    <!-- Feature End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="text-primary"><span class="text-white">TRAVEL</span>ER</h1>
+                </a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum vehicula tempor.</p>
+                <h6 class="text-uppercase text-white py-2">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="text-white-50 mr-3" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="text-white-50 mr-3" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-white-50 mr-3" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="text-white-50" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
-            <div class="col-lg-6 text-center text-md-right">
-                <p class="m-0 text-white-50">Designed by <a href="https://htmlcodex.com">HTML Codex</a>
-                </p>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-uppercase text-white mb-4">Quick Links</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href=""><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white-50 mb-2" href=""><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white-50 mb-2" href=""><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50 mb-2" href=""><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-uppercase text-white mb-4">Our Services</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href=""><i class="fa fa-angle-right mr-2"></i>Travel Arrangement</a>
+                    <a class="text-white-50 mb-2" href=""><i class="fa fa-angle-right mr-2"></i>Air Ticketing</a>
+                    <a class="text-white-50 mb-2" href=""><i class="fa fa-angle-right mr-2"></i>Travel Insurance</a>
+                    <a class="text-white-50 mb-2" href=""><i class="fa fa-angle-right mr-2"></i>Hotel Booking</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-uppercase text-white mb-4">Contact Us</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
             </div>
         </div>
     </div>
@@ -285,13 +288,14 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
@@ -306,4 +310,3 @@
 </body>
 
 </html>
-

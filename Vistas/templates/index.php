@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-6">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAVELER - Free Travel Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -13,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 
+    <link href="estilos.css" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
@@ -21,7 +24,6 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link type="text/css" rel="stylesheet" href="/CSS/style.css">
 </head>
 
 <body>
@@ -68,8 +70,8 @@
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
                         <a href="login.html" class="nav-item nav-link active">Login</a>
-                        <a href="Destianation.html" class="nav-item nav-link">Destinos</a>
-                        <a href="Services.html" class="nav-item nav-link">Servicios</a>
+                        <a href="../templates.layout/Destination.html" class="nav-item nav-link">Destinos</a>
+                        <a href="../templates.layout/Services.html" class="nav-item nav-link">Servicios</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Paginas</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
@@ -94,7 +96,7 @@
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="Imgs/Travels-Mejorada.jpeg" alt="Image">
+                    <img class="d-block w-100" src="/Proyecto_MapaInteractivo/Imgs/Travels-Mejorada.jpeg" alt="First slide">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
@@ -104,7 +106,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="Imgs/MapaMejorado.jpeg" alt="Image">
+                    <img class="w-100" src="/Proyecto_MapaInteractivo/Imgs/MapaMejorado.jpeg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>

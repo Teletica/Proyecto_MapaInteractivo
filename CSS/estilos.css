@@ -1,5 +1,4 @@
 
-
 /******* Bootstrap Theming ********/
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -21,7 +20,7 @@
     --white: #fff;
     --gray: #6c757d;
     --gray-dark: #343a40;
-    --primary: #7AB730;
+    --primary: #3DA974;
     --secondary: #f4faec;
     --success: #28a745;
     --info: #17a2b8;
@@ -154,7 +153,7 @@
   }
   
   a {
-    color: #7AB730;
+    color: #3DA974;
     text-decoration: none;
     background-color: transparent;
   }
@@ -2368,8 +2367,8 @@
   
   .btn-primary {
     color: #fff;
-    background-color: #7AB730;
-    border-color: #7AB730;
+    background-color: #3DA974;
+    border-color: #3DA974;
   }
   
   .btn-primary:hover {
@@ -2387,8 +2386,8 @@
   
   .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
-    background-color: #7AB730;
-    border-color: #7AB730;
+    background-color: #3DA974;
+    border-color: #3DA974;
   }
   
   .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
@@ -2663,14 +2662,14 @@
   }
   
   .btn-outline-primary {
-    color: #7AB730;
-    border-color: #7AB730;
+    color: #3DA974;
+    border-color: #3DA974;
   }
   
   .btn-outline-primary:hover {
     color: #fff;
-    background-color: #7AB730;
-    border-color: #7AB730;
+    background-color: #3DA974;
+    border-color: #3DA974;
   }
   
   .btn-outline-primary:focus, .btn-outline-primary.focus {
@@ -2678,15 +2677,15 @@
   }
   
   .btn-outline-primary.disabled, .btn-outline-primary:disabled {
-    color: #7AB730;
+    color: #3DA974;
     background-color: transparent;
   }
   
   .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
   .show > .btn-outline-primary.dropdown-toggle {
     color: #fff;
-    background-color: #7AB730;
-    border-color: #7AB730;
+    background-color: #3DA974;
+    border-color: #3DA974;
   }
   
   .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
@@ -2920,7 +2919,7 @@
   
   .btn-link {
     font-weight: 400;
-    color: #7AB730;
+    color: #3DA974;
     text-decoration: none;
   }
   
@@ -3217,7 +3216,7 @@
   .dropdown-item.active, .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #7AB730;
+    background-color: #3DA974;
   }
   
   .dropdown-item.disabled, .dropdown-item:disabled {
@@ -3506,8 +3505,8 @@
   
   .custom-control-input:checked ~ .custom-control-label::before {
     color: #fff;
-    border-color: #7AB730;
-    background-color: #7AB730;
+    border-color: #3DA974;
+    background-color: #3DA974;
   }
   
   .custom-control-input:focus ~ .custom-control-label::before {
@@ -3567,8 +3566,8 @@
   }
   
   .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
-    border-color: #7AB730;
-    background-color: #7AB730;
+    border-color: #3DA974;
+    background-color: #3DA974;
   }
   
   .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
@@ -3792,7 +3791,7 @@
     width: 1rem;
     height: 1rem;
     margin-top: -0.25rem;
-    background-color: #7AB730;
+    background-color: #3DA974;
     border: 0;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     appearance: none;
@@ -3820,7 +3819,7 @@
   .custom-range::-moz-range-thumb {
     width: 1rem;
     height: 1rem;
-    background-color: #7AB730;
+    background-color: #3DA974;
     border: 0;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     appearance: none;
@@ -3851,7 +3850,7 @@
     margin-top: 0;
     margin-right: 0.2rem;
     margin-left: 0.2rem;
-    background-color: #7AB730;
+    background-color: #3DA974;
     border: 0;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     appearance: none;
@@ -3979,7 +3978,7 @@
   .nav-pills .nav-link.active,
   .nav-pills .show > .nav-link {
     color: #fff;
-    background-color: #7AB730;
+    background-color: #3DA974;
   }
   
   .nav-fill > .nav-link,
@@ -4585,7 +4584,7 @@
     padding: 0.5rem 0.75rem;
     margin-left: -1px;
     line-height: 1.25;
-    color: #7AB730;
+    color: #3DA974;
     background-color: #fff;
     border: 1px solid #dee2e6;
   }
@@ -4611,8 +4610,8 @@
   .page-item.active .page-link {
     z-index: 3;
     color: #fff;
-    background-color: #7AB730;
-    border-color: #7AB730;
+    background-color: #3DA974;
+    border-color: #3DA974;
   }
   
   .page-item.disabled .page-link {
@@ -4673,7 +4672,7 @@
   
   .badge-primary {
     color: #fff;
-    background-color: #7AB730;
+    background-color: #3DA974;
   }
   
   a.badge-primary:hover, a.badge-primary:focus {
@@ -4974,7 +4973,7 @@
     color: #fff;
     text-align: center;
     white-space: nowrap;
-    background-color: #7AB730;
+    background-color: #3DA974;
     transition: width 0.6s ease;
   }
   
@@ -5050,8 +5049,8 @@
   .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #7AB730;
-    border-color: #7AB730;
+    background-color: #3DA974;
+    border-color: #3DA974;
   }
   
   .list-group-item + .list-group-item {
@@ -6097,7 +6096,7 @@
   }
   
   .bg-primary {
-    background-color: #7AB730 !important;
+    background-color: #3DA974 !important;
   }
   
   a.bg-primary:hover, a.bg-primary:focus,
@@ -6225,7 +6224,7 @@
   }
   
   .border-primary {
-    border-color: #7AB730 !important;
+    border-color: #3DA974 !important;
   }
   
   .border-secondary {
@@ -7380,6 +7379,7 @@
   .mr-2,
   .mx-2 {
     margin-right: 0.5rem !important;
+    color: #232324;
   }
   
   .mb-2,
@@ -8457,6 +8457,7 @@
     .mb-lg-0,
     .my-lg-0 {
       margin-bottom: 0 !important;
+      color: #232324;
     }
     .ml-lg-0,
     .mx-lg-0 {
@@ -9267,7 +9268,7 @@
   }
   
   .text-primary {
-    color: #7AB730 !important;
+    color: #3DA974 !important;
   }
   
   a.text-primary:hover, a.text-primary:focus {
@@ -9523,7 +9524,7 @@
   
   .navbar-light .navbar-nav .nav-link:hover,
   .navbar-light .navbar-nav .nav-link.active {
-    color: #7AB730;
+    color: #3DA974;
   }
   
   @media (max-width: 991.98px) {
@@ -9622,14 +9623,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #7AB730;
+    border: 2px solid #3DA974;
     background: #FFFFFF;
-    color: #7AB730;
+    color: #3DA974;
     transition: .5s;
   }
   
   .service-item:hover i {
-    background: #7AB730;
+    background: #3DA974;
     color: #FFFFFF;
   }
   
@@ -9726,7 +9727,7 @@
   
   .testimonial-carousel .owl-dot.active {
     width: 40px;
-    background: #7AB730;
+    background: #3DA974;
   }
   
   .testimonial-carousel .owl-item.center .testimonial-text {
@@ -9751,7 +9752,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: #7AB730;
+    background: #3DA974;
   }
   
   .blog-date::after {
@@ -9771,4 +9772,43 @@
     padding: 0;
     list-style-type: none;
   }
+
+  #title{
+    cursor: pointer;
+  }
   
+  .mapa {
+    display: flex; /* This styles will make the map centered, as well as responsive. */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-bottom: -3%;
+}
+
+  svg path{
+      fill: #3DA974; /* Default fill color of the overall map. */
+      stroke: white;
+      stroke-width: .50;
+  }
+
+  svg path:hover{
+      fill: #169873; /* Default fill color of a provinced when being hovered by user. */
+      transition: 0.3s; /* The moment cursor hovers over province, hover fill color will be displayed in 0.3s */
+      cursor: pointer;
+  }
+
+  .water {
+      fill: #6CCFF6; /* Default fill color for 'Laguna Arenal'. */
+  }
+
+  .water:hover {
+      fill: #4392F1; /* Default fill color for 'Laguna Arenal' when being hovered by user. */
+  }
+
+  .verde{
+    color:#169873;
+  }
+

@@ -25,6 +25,7 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="../CCSS" type="text/css" />
 
     <!-- Customized Bootstrap Stylesheet -->
 </head>

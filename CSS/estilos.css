@@ -361,6 +361,21 @@
     display: none !important;
   }
   
+  .header_provincia h1{
+    text-align: center;
+    color: #fcf8e3;
+    font-size: 64px;
+  }
+
+  .cantones {
+    background-color: #fcf8e3;
+  }
+
+  .cantones h2{
+    text-align: center;
+    color: #169873;
+  }
+
   h1, h2, h3, h4, h5, h6,
   .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 0.5rem;
@@ -9812,3 +9827,46 @@
     color:#169873;
   }
 
+  .provincia {
+    background-color: #169873;
+  }
+
+  .header_provincia {
+    margin-top: 14%;
+    text-align: center;
+    margin-bottom: 17%;
+  
+  }
+
+  .boton-redondo {
+    width: 120px;
+    height: 120px;
+    background-color: #fcf8e3;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    margin: 0 10px;
+    margin-top: 2%;
+  }
+
+  .boton-redondo i {
+    font-size: 72px;
+    color: #169873;
+    text-decoration: none;
+  }
+
+  .header_provincia a{
+    text-decoration: none;
+  }
+
+  .cantonAlajuela {
+    width: 800px;
+    display: block;
+    margin: 0 auto;
+    
+  }

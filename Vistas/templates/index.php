@@ -24,8 +24,10 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
     <script src="script.js"></script>
     <link rel="stylesheet" href="../CCSS" type="text/css" />
+    <script src="/Proyecto_MapaInteractivo/JS/script.js"></script>
 
     <!-- Customized Bootstrap Stylesheet -->
 </head>
@@ -57,7 +59,7 @@
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="" class="navbar-brand">
+                <a href="/Proyecto_MapaInteractivo/Vistas/templates/index.php" class="navbar-brand">
                     <h1 id="title" class="m-0 text-primary text-dark">
                         TURISMO COSTA RICA</h1>
                 </a>
@@ -88,93 +90,6 @@
     <!-- Navbar End -->
 
 
-    <!-- Carousel Start -->
-    <!-- <div class="container-fluid p-0">
-        <div id="header-carousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="/Proyecto_MapaInteractivo/Imgs/Travels-Mejorada.jpeg" alt="First slide">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
-                            <h1 class="display-3 text-white mb-md-4">Descubramos Costa Rica juntos!</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="/Proyecto_MapaInteractivo/Imgs/MapaMejorado.jpeg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
-                            <h1 class="display-3 text-white mb-md-4">Fomentar el turismo es fomentar nuestra historia como pais!</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
-                <div class="btn btn-dark" style="width: 45px; height: 45px;">
-                    <span class="carousel-control-prev-icon mb-n2"></span>
-                </div>
-            </a>
-            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
-                <div class="btn btn-dark" style="width: 45px; height: 45px;">
-                    <span class="carousel-control-next-icon mb-n2"></span>
-                </div>
-            </a>
-        </div>
-    </div> -->
-
-    <!-- Booking Start -->
-    <!--
-    <div class="container-fluid booking mt-5 pb-5">
-        <div class="container pb-5">
-            <div class="bg-light shadow" style="padding: 30px;">
-                <div class="row align-items-center" style="min-height: 60px;">
-                    <div class="col-md-10">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Destination</option>
-                                        <option value="1">Destination 1</option>
-                                        <option value="2">Destination 2</option>
-                                        <option value="3">Destination 3</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="date mb-3 mb-md-0">
-                                    <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="date mb-3 mb-md-0">
-                                    <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Duration</option>
-                                        <option value="1">Duration 1</option>
-                                        <option value="2">Duration 2</option>
-                                        <option value="3">Duration 3</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="" class="btn btn-primary btn-block" style="height: 47px;">Submit</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Booking End -->
-
     <div class="mapa">
             <svg
         xmlns:mapsvg="http://mapsvg.com"
@@ -186,11 +101,12 @@
         width="648.29871"
         height="612.98956">
         
-        <a xlink:title="Alajuela">
+        <a xlink:title="Alajuela" xlink:href="../templates.provincias/Alajuela.html">
         <path
             d="m 243.33363,26.900858 13.39,7.81 6.77,-2.22 1.02,2.38 0.9,1.15 3.76,1.62 6.66,2.3 3.69,2.05 6.43,7.03 2.76,1.52 1.42,0.34 1.22,-0.03 1.35,-0.47 1.36,-0.95 1.51,-1.63 0.9,-0.47 3.92,-0.94 2.85,-2.85 0.49,-0.26 0.54,0.23 0.8,0.82 1.79,2.94 -0.04,0.97 -0.74,2.11 -0.63,0.98 0.11,1.02 1.9,1.3 1.24,2.44 0.66,1.85 0.96,0.98 1.91,-0.1 2.03,0.29 1.27,0.53 0.88,0.77 1.24,1.69 0.12,1.01 0.63,0.52 1.39,0 3.96,0.84 1.01,0.4 1.38,1.43 3.24,1.09 0.81,1.01 0.47,1.39 -0.51,1.15 0.61,1.42 0.24,1.27 -0.83,1.38 0.03,1.03 -0.65,0.63 -2.82,0.83 0.37,1.17 1.39,0.66 0.49,1.03 2.29,0.54 1.64,1.05 0.23,1.41 0.88,1.41 1.16,-1.13 0.9,-0.5 1.27,0.02 1.88,0.73 2.33,-0.41 1.36,0.02 0,0 -1.34,38.680002 0.1,32.71 -0.12,24.27 -0.4,22.48 0.9,14.52 -0.05,4.97 -1.36,2.86 0.01,2.66 -1.32,4.59 -1.09,2.28 -2.92,2.56 1.38,4.41 0,0 -2.25,-0.11 -2.84,1.29 -1.97,1.72 -1.39,1.6 -2.77,2.15 -3.24,1.25 -7.58,0.61 -4.67,1.51 -4.66,0.18 -3.15,-1.93 -2.61,-0.68 -4.71,-0.04 -0.11,0.29 -7.72,1.59 -2.65,-0.15 -2.72,1.74 -1.06,1.13 -2.73,1.28 -1.58,1.14 -3.02,3.03 -2.63,0.76 -2.17,2.83 -0.48,1.57 -2.71,4.17 -2.48,0.03 0,0 -1.65,-1.22 -2.04,-0.93 -1.01,-1.3 -0.35,-2.53 -2.9,-0.78 -2.82,-0.16 -3.45,0.15 -4.86,-0.85 -1.5,-2.44 0.26,-3.47 1.39,-1.77 2.34,-0.76 2.28,-4.91 1.62,-1.83 3.11,-0.08 2.98,-0.26 2.45,-3.24 2.97,-2.79 4.33,-1.62 0.95,-3.38 -0.44,-3.56 -2.96,-2.99 -3.52,-0.42 -6.73,-0.11 -0.76,-2.4 -0.67,-3.85 -2.74,-1.26 -1.14,-1.93 -2.98,-6.04 -0.03,-3.18 -0.31,-5.13 0.39,-2.61 -2.22,-1.5 1.52,-3.22 1.55,-2.41 1.57,-3.8 -1.08,-3.78 -2.36,-2.48 -1.97,-2.49 -1.97,-0.7 -2.91,0.94 -2.55,1.58 -4.16,1.44 -6.39,-4.45 -3.35,-4.88 0,0 2.39,-3.96 1.38,-4.42 1.13,-0.73 -2.52,-3.86 0.8,-6.9 0.09,-3.24 0,0 2.99,-0.08 4.38,0.29 0.96,-0.43 -0.6,-1.03 0.03,-1.27 -0.43,-1.08 -1.24,-0.95 -1.78,-0.01 -2.21,-3.06 -3.38,0.32 0,0 -0.18,-2.37 0.06,-2.25 -3.06,-0.44 -3.04,-1.88 -4.04,-2.72 -4.55,-4.85 -5.43,-2.97 -7.76,-0.08 -2.27,-3.35 -3.07,-2.92 -3.28,-2.16 -4.09,-5.04 -1.73,-4.52 -0.26,-3.17 -1.23,-3.32 -0.63,-2.130002 -2.27,-0.8 -2.5,-1.32 -4.91,-0.85 -2.45,-1.44 -2.55,-0.68 -2.46,0.53 -3,-0.15 -1.96,-0.47 -3.64,-4.99 -3.63,-2.33 -3.64,-0.88 -3.75,-0.25 -5.04,0.55 -5.96,0.97 -3.63,-0.31 -1.94,-1.79 -1.93,-5.68 -0.14,-3.24 -3.16,-1.93 -6.27,-2.44 -3.18,-2.86 -1.63,-3.02 -1.05,-2.7 -0.82,-2.69 -1.84,-2.33 -5.290001,-8.77 1.160001,-1.94 2.57,-0.59 3.75,-1.72 2.59,-2.27 0.82,-1.48 1.76,-5.49 1.23,-1.36 4.6,-0.07 1.97,-1.5 1.9,0.01 3.03,3.73 3.1,2.18 2.3,0.05 0.67,-3.09 0.4,-4.53 1.07,-4.17 0,0 2.46,1.13 7.57,4.03 41.58,14.98 14.25,5.95 22.81,-13.36 21.66,-13.28 z"
             title="Alajuela"
-            id="CR-A" /></a>
+            id="CR-A"
+             /></a>
         <a xlink:title="Cartago">
         <path
             d="m 383.60363,206.02086 24.84,13.29 5.84,3.31 13.02,5.47 19.51,9.28 31.8,0.17 25.3,-0.17 -1.16,1.76 -2.56,1.22 -0.92,2.11 0.06,2.13 -2.69,0.54 0.11,4.2 0.79,3.96 1.41,3.31 0.05,4.38 -0.36,1.34 1.48,3.82 -3.64,4.08 -7.43,10.3 -2.52,2.84 -2.17,2.76 -1.87,3.23 -0.17,4.73 -1.21,4.07 -4.1,3.91 -3.55,2.7 -10.45,9.62 1.27,2.1 1.35,3.42 0.35,2.58 -0.33,2.72 0.69,2.11 0.93,3.71 0,0 -4.25,-1.96 -6.23,-5.31 -2.68,-1.08 -3.59,-0.88 -4.73,-2.93 -1.98,-0.92 -2.26,-2.65 -2.38,-0.86 -2.06,0.29 -1.41,1.19 -1.1,2.11 -3.06,1.99 -2.38,-1.15 -3.95,0.97 -2.26,-0.57 -0.86,-2.11 -2.82,-0.09 -1.4,-0.89 -0.83,-2.92 0.58,-2.49 -1.78,0.22 -2.75,-1.12 -2.31,-0.63 -2.16,-1.03 -2.89,-0.62 -2.46,-1.83 -1.05,-2.68 0.02,-3.64 -0.84,-1.47 -3.24,-0.55 -0.96,0.55 -2.08,-0.29 -1.51,-0.77 -2.89,-2.86 -1.71,0.86 -0.99,-0.5 -0.61,-1.31 -2.04,-1.32 -2.02,-0.18 -0.72,-1.07 0.24,-1.91 -0.14,-2.94 -4.82,-2.12 -2.28,-3.51 -1.79,-4.68 -1.42,0.61 -5.09,3.08 -2.42,0.13 -3.31,0.78 -3.11,-0.2 -2.04,-1.04 0.87,-1.82 -0.3,-2.64 1.14,-0.26 3.58,-1.77 3.72,-2.82 1.99,-1.09 0.53,-1.68 2.71,-4.06 1.01,-1.18 0.87,-1.7 0.82,-1.75 0.02,-1.56 -0.95,-1.07 -1.9,-0.06 -3.15,0.43 0.27,-2.83 2.82,-1.98 2.4,-2.84 0.21,-3.01 1.31,-0.72 8.25,-1.09 2.83,0.55 3.43,-0.67 1.97,-1.67 1.62,-1.77 1.74,0.53 1.4,0.6 3.42,-1.08 0.88,-1.76 -1.34,-2.79 -0.55,-3.33 -0.14,-3.17 -1.4,-2.91 -3,-2.74 -3.95,-1.51 -2.12,-1.79 -2.2,-9.52 z"

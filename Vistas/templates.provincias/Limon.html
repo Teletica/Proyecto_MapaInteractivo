@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limón</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="/Proyecto_MapaInteractivo/CSS/estilos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/Proyecto_MapaInteractivo/JS/script.js"></script>
+
+    <!-- Estilos incluidos -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #168f26;
+            /* Fondo amarillo */
+            scroll-behavior: smooth;
+        }
+
+        .header_provincia {
+            background-image: url('/Proyecto_MapaInteractivo/Imgs/Limon/limon-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            /* Cambiado a negro */
+            text-align: center;
+            padding: 150px 20px;
+            position: relative;
+        }
+
+        .header_provincia h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #f7f7f7;
+            position: relative;
+        }
+
+        .header_provincia h1::before {
+            content: "\f060";
+            /* Código Unicode del ícono de flecha */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 2rem;
+            position: absolute;
+            left: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .header_provincia h1::before:hover {
+            color: #239b2b;
+        }
+
+        .header_provincia h1::before {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .header_provincia h1::before {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .header_provincia h1::before {
+            content: "\f060";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff8f8;
+        }
+
+        .header_provincia h1:hover::before {
+            color: #31ce3c;
+        }
+
+        .header_provincia .botones {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .header_provincia .boton-redondo {
+            font-size: 1.5rem;
+            color: #fff;
+            background-color: #1b5e20;
+            /* Verde predominante */
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .header_provincia .boton-redondo:hover {
+            background-color: #ffffff;
+            /* Amarillo */
+            color: #1b5e20;
+            /* Texto verde al hacer hover */
+        }
+
+        .section {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: #1b5e20;
+            /* Verde */
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .section .canton-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .section .canton-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .section img {
+            width: 100%;
+            height: auto;
+            border-bottom: 5px solid #1b5e20;
+            /* Verde */
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .section img.shrink {
+            width: 80%;
+            /* Hacer la imagen más pequeña */
+            transform: scale(1);
+            margin: 0 auto;
+            display: block;
+        }
+
+        .shrink-on-load {
+            animation: shrink 0.6s ease-in-out forwards;
+        }
+
+        @keyframes shrink {
+            0% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Estilo para la sección con fondo verde */
+        .section-green {
+            background-color: #1b5e20;
+            /* Fondo verde */
+            color: #fff;
+            /* Texto en blanco */
+        }
+
+        .section-green h2 {
+            color: #ffeb3b;
+            /* Texto amarillo */
+        }
+
+        .section-green .canton-card {
+            background-color: #0d4a1c;
+            /* Fondo más oscuro para las tarjetas */
+            border: 1px solid #ffeb3b;
+            /* Borde amarillo para resaltar */
+        }
+
+        .section-green .canton-content h3,
+        .section-green .canton-content p {
+            color: #fff;
+            /* Texto en blanco para la sección verde */
+        }
+
+        .section-green .canton-card:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        /* Estilo para la sección con fondo amarillo */
+        .section-yellow {
+            background-color: #ffeb3b;
+            /* Fondo amarillo */
+            color: #000;
+            /* Texto en negro para contraste */
+        }
+
+        .section-yellow .canton-card {
+            background-color: #fff;
+            /* Fondo blanco para las tarjetas */
+            border: 1px solid #1b5e20;
+            /* Borde verde para resaltar */
+        }
+
+        .section-yellow .canton-content h3 {
+            color: #1b5e20;
+            /* Título en verde */
+        }
+
+        .section-yellow .canton-content p {
+            color: #333;
+            /* Texto en gris oscuro */
+        }
+
+        .section-yellow .canton-card:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .back-button {
+            font-size: 1.5rem;
+            color: #6d9c21;
+            background-color: #ffffff;
+            /* Verde predominante */
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-decoration: none;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #ffeb3b;
+            /* Amarillo */
+            color: #1b5e20;
+            /* Texto verde al hacer hover */
+        }
+
+        .back-button-emoji {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 2rem;
+            color: #000;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .back-button-emoji:hover {
+            color: #1b5e20;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header_provincia" id="header_provincia">
+        <h1>LIMÓN</h1>
+        <div class="botones">
+            <a class="boton-redondo" href="#cantones" title="Cantones">
+                <i class="fas fa-globe-americas"></i>
+            </a>
+            <a class="boton-redondo" href="#lugares-turisticos" title="Lugares Turísticos">
+                <i style="font-size: 64px;" class="fas fa-mountain"></i>
+            </a>
+            <a class="boton-redondo" href="#comida-tipica" title="Comida Típica">
+                <i class="fas fa-utensils"></i>
+            </a>
+            <a class="boton-redondo" href="#cultura" title="Cultura">
+                <i style="font-size: 64px;" class="fas fa-campground"></i>
+            </a>
+        </div>
+        
+    </header>
+
+    <section class="section" id="cantones">
+        <h2>CANTONES</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="canton-card">
+                        <img src="/Proyecto_MapaInteractivo/Imgs/Limon/parque-canton-limon.jpg"
+                            alt="Parque Central de Limón" class="shrink-on-load">
+                        <div class="canton-content">
+                            <h3>Limón</h3>
+                            <p>La ciudad de Limón es el principal puerto del país y un centro cultural afrocaribeño, con
+                                una rica historia y una vibrante escena musical y gastronómica.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="canton-card">
+                        <img src="/Proyecto_MapaInteractivo/Imgs/Limon/talamanca.jpg" alt="Talamanca"
+                            class="shrink shrink-on-load">
+                        <div class="canton-content">
+                            <h3>Talamanca</h3>
+                            <p>Famoso por su biodiversidad y comunidades indígenas, Talamanca es un destino ideal para
+                                los amantes de la naturaleza y la cultura autóctona.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="canton-card">
+                        <img src="/Proyecto_MapaInteractivo/Imgs/Limon/pococi.jpg" alt="Pococí" class="shrink-on-load">
+                        <div class="canton-content">
+                            <h3>Pococí</h3>
+                            <p>Conocido por sus grandes extensiones de plantaciones de banano y su cercanía a la
+                                Reserva de Tortuguero, Pococí es un cantón agrícola clave en la región.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección de Lugares Turísticos con fondo verde -->
+    <section class="section section-green" id="lugares-turisticos">
+        <h2>LUGARES TURÍSTICOS</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="canton-card">
+                        <img src="/Proyecto_MapaInteractivo/Imgs/Limon/parque-nacional-cahuita.jpg"
+                            alt="Parque Nacional Cahuita" class="shrink-on-load">
+                        <div class="canton-content">
+                            <h3>Parque Nacional Cahuita</h3>
+                            <p>Conocido por sus playas de arena blanca y sus arrecifes de coral, Cahuita es uno de los
+                                principales destinos ecoturísticos de Limón.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="canton-card">
+                        <img src="/Proyecto_MapaInteractivo/Imgs/Limon/puerto-viejo.jpg" alt="Puerto Viejo"
+                            class="shrink-on-load">
+                        <div class="canton-content">
+                            <h3>Puerto Viejo</h3>
+                            <p>Famoso por su ambiente relajado y sus influencias afrocaribeñas, Puerto Viejo es un
+                                destino popular entre los turistas que buscan cultura y playa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="canton-card">
+                        <img src="/Proyecto_MapaInteractivo/Imgs/Limon/tortuguero.jpg" alt="Parque Nacional Tortuguero"
+                            class="shrink-on-load">
+                        <div class="canton-content">
+                            <h3>Parque Nacional Tortuguero</h3>
+                            <p>Este parque es conocido mundialmente como el lugar donde las tortugas marinas anidan y
+                                es un destino de ensueño para los amantes de la vida silvestre.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Nueva sección de Comida Típica con fondo amarillo -->
+    <section class="section section-yellow" id="comida-tipica">
+        <h2>COMIDA TÍPICA</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="canton-card">
+                        <img src="/Proyecto_MapaInteractivo/Imgs/Limon/rondon.jpg" alt="Rondón" class="shrink-on-load">
+                        <div class="canton-content">
+                            <h3>Rondón</h3>
+                            <p>Plato tradicional afrocaribeño hecho a base de pescado, plátano y leche de coco, es un
+                                símbolo de la rica herencia culinaria de Limón.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="canton-card">
+                        <img src="/Proyecto_MapaInteractivo/Imgs/Limon/pati.jpg" alt="Pati" class="shrink-on-load">
+                        <div class="canton-content">
+                            <h3>Pati</h3>
+                            <p>El pati es un delicioso pastel relleno de carne especiada, muy popular en la gastronomía
+                                limonense, y se encuentra en casi cualquier rincón de la provincia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="canton-card">
+                        <img src="/Proyecto_MapaInteractivo/Imgs/Limon/plantinta.jpg" alt="Plántano en Tentación"
+                            class="shrink-on-load">
+                        <div class="canton-content">
+                            <h3>Plátano en Tentación</h3>
+                            <p>Este postre, hecho a base de plátano maduro cocinado con azúcar y canela, es un
+                                acompañamiento dulce típico de la región caribeña.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-green" id="cultura">
+        <h2>CULTURA</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="canton-card">
+                        <img src="/Proyecto_MapaInteractivo/Imgs/Limon/dia-negra.jpg"
+                            alt="Día de la Persona Negra y la Cultura Afrocostarricense" class="shrink-on-load">
+                        <div class="canton-content">
+                            <h3>Día de la Persona Negra y la Cultura Afrocostarricense</h3>
+                            <p>El 31 de agosto, Limón celebra con orgullo el Día de la Persona Negra y la Cultura
+                                Afrocostarricense, una festividad que honra la herencia y las contribuciones de la
+                                comunidad afrodescendiente en Costa Rica.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="canton-card">
+                        <img src="/Proyecto_MapaInteractivo/Imgs/Limon/carnaval-limon.jpg"
+                            alt="Carnaval de Limón" class="shrink-on-load">
+                        <div class="canton-content">
+                            <h3>Carnaval de Limón</h3>
+                            <p>El Carnaval de Limón es una de las celebraciones más grandes de Costa Rica, con desfiles,
+                                música, baile y una explosión de colores que reflejan la vibrante cultura caribeña.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="canton-card">
+                        <img src="/Proyecto_MapaInteractivo/Imgs/Limon/tambores.jpg" alt="Tambores Africanos"
+                            class="shrink-on-load">
+                        <div class="canton-content">
+                            <h3>Tambores Africanos</h3>
+                            <p>La música es una parte fundamental de la cultura limonense, y los tambores africanos,
+                                junto con el calipso, son el alma de muchas festividades en la región.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="http://localhost/Proyecto_MapaInteractivo/Vistas/templates/" class="back-button" title="Regresar">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+</body>
+
+</html>

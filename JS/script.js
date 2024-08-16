@@ -50,3 +50,38 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(section);
     });
 });
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const backButton = document.querySelector(".back-button-emoji");
+
+    backButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const linksToHome = document.querySelectorAll(".back-home");
+
+    linksToHome.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            document.body.classList.add("zoom-out");
+
+            setTimeout(() => {
+                window.location.href = this.href;
+            }, 1000); // Espera a que termine la animación antes de redirigir
+        });
+    });
+});
+=======
+>>>>>>> 6461874d79fbab259b780c31c1eb56cf9293f215
+>>>>>>> Stashed changes

@@ -2,7 +2,7 @@
 
 $server = "localhost";
 $user = "root";
-$pass = "";
+$pass = "Seb.Kob30!";
 $db = "Proyecto_MapaInteractivo";
 
 // Crear la conexión

@@ -2,8 +2,8 @@
 
 $server = "localhost";
 $user = "root";
-$pass = "contrasena";
-$db = "reservas";
+$pass = "";
+$db = "proyecto_mapainteractivo";
 
 // Crear la conexión
 $conn = new mysqli($server, $user, $pass, $db);

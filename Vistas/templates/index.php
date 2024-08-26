@@ -26,7 +26,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <script src="script.js"></script>
-    <link rel="stylesheet" href="../CCSS" type="text/css" />
+    <link rel="stylesheet" href="../../CSS/estilos.css" type="text/css" />
     <script src="/Proyecto_MapaInteractivo/JS/script.js"></script>
 
     <!-- Customized Bootstrap Stylesheet -->
@@ -71,6 +71,7 @@
                         <a href="login.html" class="nav-item nav-link active">Login</a>
                         <a href="../templates.layout/Destination.html" class="nav-item nav-link">Destinos</a>
                         <a href="../templates.layout/Services.html" class="nav-item nav-link">Servicios</a>
+                        <a href="../templates.layout/php/cotizar.php" class="nav-item nav-link">Cotizacion</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Paginas</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">

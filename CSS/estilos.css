@@ -2682,6 +2682,7 @@ input[type="number"] {
     color: #fff;
     background-color: #3DA974;
     border-color: #3DA974;
+    margin-bottom: 30px;
   }
   
   .btn-primary:hover {
@@ -10194,4 +10195,8 @@ input[type="number"] {
   margin-bottom: 1%;
   text-align: justify;
   color: black;
+}
+
+.form-group{
+  margin: 45px;
 }

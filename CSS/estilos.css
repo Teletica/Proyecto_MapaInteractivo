@@ -10110,11 +10110,7 @@ input[type="number"] {
       stroke-width: .50;
   }
 
-  svg path:hover{
-      fill: #169873; /* Default fill color of a provinced when being hovered by user. */
-      transition: 0.3s; /* The moment cursor hovers over province, hover fill color will be displayed in 0.3s */
-      cursor: pointer;
-  }
+
 
   .water {
       fill: #6CCFF6; /* Default fill color for 'Laguna Arenal'. */

@@ -121,3 +121,7 @@ toggleDarkMode.addEventListener('click', function () {
     });
 });
 
+
+function seleccionarProvincia(provincia) {
+    window.location.href = "../templates.provincias/provincia.php?provincia=" + encodeURIComponent(provincia);
+}

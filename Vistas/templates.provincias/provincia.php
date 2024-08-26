@@ -68,7 +68,7 @@ if (isset($_GET['provincia'])) {
             width: 80px;
             height: 80px;
             border: 10px solid #fff;
-            border-top: 10px solid #d32f2f;
+            border-top: 10px solid ;
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }

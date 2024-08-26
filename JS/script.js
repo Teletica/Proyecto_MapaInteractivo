@@ -98,5 +98,26 @@ toggleDarkMode.addEventListener('click', function () {
     } else {
         toggleDarkMode.textContent = 'Modo Oscuro';
     }
+    
+    $(document).ready(function() {
+        $(".like-button").click(function() {
+            var button = $(this);
+            var idComentario = button.data("id");
+    
+            $.ajax({
+                url: 'like_comentario.php',
+                type: 'POST',
+                data: { id_comentario: idComentario },
+                success: function(response) {
+                    // Actualiza el número de likes en el botón
+                    var currentLikes = parseInt(button.text().match(/\d+/)[0]);
+                    button.text('Like (' + (currentLikes + 1) + ')');
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error al dar like:", error);
+                }
+            });
+        });
+    });
 });
 

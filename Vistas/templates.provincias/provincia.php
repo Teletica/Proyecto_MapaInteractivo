@@ -37,6 +37,14 @@ if (isset($_GET['provincia'])) {
     $stmt_atracciones->bind_param('s', $provincia);
     $stmt_atracciones->execute();
     $result_atracciones = $stmt_atracciones->get_result();
+
+    $query_restaurantes = "SELECT Nombre, Descripcion, Tipo, Imagen_comida FROM restaurantes WHERE ProvinciaID = (SELECT ProvinciaID FROM provincias WHERE Nombre = ?)";
+    $stmt_restaurantes = $conn->prepare($query_restaurantes);
+    $stmt_restaurantes->bind_param('s', $provincia);
+    $stmt_restaurantes->execute();
+    $result_restaurantes = $stmt_restaurantes->get_result();
+
+
 } else {
     $provinciaNombre = 'No encontramos esa provincia, tal vez aún estamos trabajando en ella.';
 }
@@ -577,48 +585,34 @@ if (isset($_GET['provincia'])) {
 
     <!--  sección de Comida Típica  -->
     <section class="section section-wheat" id="comida-tipica">
-        <h2>COMIDA TÍPICA</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="canton-card">
-                        <img src="/Proyecto_MapaInteractivo/Imgs/Heredia/donde-papa.jpg" alt="Donde Papa Restaurant"
-                            class="shrink-on-load">
-                        <div class="canton-content">
-                            <h3>Donde Papa Restaurant</h3>
-                            <p>Amplio y versátil, Donde Papa Restaurant en Santa Lucía de Heredia ofrece una amplia
-                                variedad de platos de todos los tipos, convirtiéndose en un lugar favorito para
-                                disfrutar de una comida en familia o con amigos.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="canton-card">
-                        <img src="/Proyecto_MapaInteractivo/Imgs/Heredia/barva-callejera-xl.jpg"
-                            alt="Barva de Heredia Comida Callejera XL" class="shrink-on-load">
-                        <div class="canton-content">
-                            <h3>Barva de Heredia Comida Callejera XL</h3>
-                            <p>Situado en Barva de Heredia, este lugar es conocido por sus platos de gran tamaño que
-                                hacen honor a su nombre, ofreciendo una amplia variedad de comida callejera en porciones
-                                generosas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="canton-card">
-                        <img src="/Proyecto_MapaInteractivo/Imgs/Heredia/caldosas-heredia.jpg" alt="Caldosas de Heredia"
-                            class="shrink-on-load">
-                        <div class="canton-content">
-                            <h3>Caldosas de Heredia</h3>
-                            <p>En pleno centro de Heredia, las Caldosas se han vuelto una leyenda, combinando chips de
-                                tortilla con ceviche para crear una experiencia gastronómica única que es sinónimo de
-                                esta provincia.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <h2>COMIDA TÍPICA</h2>
+    <div class="container">
+        <div class="row">
+            <?php
+            // Verifica si la provincia está definida
+            if (isset($provincia)) {
+
+                if ($result_restaurantes->num_rows > 0) {
+                    while ($row = $result_restaurantes->fetch_assoc()) {
+                        echo '<div class="col-md-4">';
+                        echo '<div class="canton-card">';
+                        echo '<img src="' . $row['Imagen_comida'] . '" alt="' . $row['Nombre'] . '" class="shrink-on-load">';
+                        echo '<div class="canton-content">';
+                        echo '<h3>' . $row['Nombre'] . '</h3>';
+                        echo '<p>' . $row['Descripcion'] . '</p>';
+                        echo '</div></div></div>';
+                    }
+                } else {
+                    echo '<p>No hay restaurantes de comida típica disponibles en esta provincia.</p>';
+                }
+            } else {
+                echo '<p>Provincia no definida.</p>';
+            }
+            ?>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <section class="section section-green" id="cultura">
         <h2>CULTURA</h2>

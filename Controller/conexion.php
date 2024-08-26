@@ -1,12 +1,12 @@
 <?php
 
-$server = "localhost";
-$user = "root";
-$pass = "";
-$db = "Proyecto_MapaInteractivo";
+$servername = "localhost";
+$username = "root";
+$password = "Seb.Kob30!";  // Asegúrate de que esta sea la contraseña correcta
+$database = "Proyecto_MapaInteractivo";
 
 // Crear la conexión
-$conn = new mysqli($server, $user, $pass, $db);
+$conn = new mysqli($servername, $username, $password, $database);
 
 // Verificar la conexión
 if ($conn->connect_error) {
@@ -14,8 +14,6 @@ if ($conn->connect_error) {
 }
 echo "Conexión exitosa";
 
-
 echo "Hola";
 
 ?>
-

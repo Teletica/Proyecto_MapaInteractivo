@@ -26,7 +26,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <script src="script.js"></script>
-    <link rel="stylesheet" href="../CCSS" type="text/css" />
+    <link rel="stylesheet" href="../../CSS/estilos.css" type="text/css" />
     <script src="/Proyecto_MapaInteractivo/JS/script.js"></script>
 
     <!-- Customized Bootstrap Stylesheet -->
@@ -71,6 +71,18 @@
                         <a href="login.html" class="nav-item nav-link active">Login</a>
                         <a href="../templates.layout/Destination.html" class="nav-item nav-link">Destinos</a>
                         <a href="../templates.layout/Services.html" class="nav-item nav-link">Servicios</a>
+                        <a href="../templates.layout/php/cotizar.php" class="nav-item nav-link">Cotizacion</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Paginas</a>
+                            <div class="dropdown-menu border-0 rounded-0 m-0">
+                                <a href="blog.html" class="dropdown-item">Guia</a>
+                                <a href="single.html" class="dropdown-item">Lugares famosos</a>
+                                <a href="destination.html" class="dropdown-item">Destinos</a>
+                                <a href="guide.html" class="dropdown-item">Guias de viaje</a>
+                                <a href="testimonial.html" class="dropdown-item">Reseñas</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contacto</a>
                     </div>
                 </div>
             </nav>
@@ -135,18 +147,87 @@
         </svg>
     </div>  
 
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Sobre nosotros</h6>
+                <h1>Todo lo que necesitas saber sobre nosotros</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4 class="text-uppercase mb-3"><i class="fa fa-laptop-code text-primary mr-3"></i>Our Mission</h4>
+                    <p>Nuestro principal objetivo es el brindarle al turista la mejor de las experiencias con nuestros servicios y nuestra asistencia siempre que la necesite!</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4 class="text-uppercase mb-3"><i class="fa fa-award text-primary mr-3"></i>Our Vision</h4>
+                    <p>Convertirnos en la empresa de turismo más importante y confiable a nivel nacional e internacional.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4 class="text-uppercase mb-3"><i class="fa fa-users-cog text-primary mr-3"></i>Our Team</h4>
+                    <p>Contamos con un equipo de profesionales capacitados para ofrecerte la mejor experiencia en tu viaje.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-light pb-5">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex">
+                        <i class="fa fa-2x fa-map-marker-alt text-primary flex-shrink-0 mr-3"></i>
+                        <div>
+                            <h4 class="text-uppercase mb-3">Destinos</h4>
+                            <p>Ofrecemos una amplia variedad de destinos para que elijas tu próximo destino.</p>
+                            <a class="text-primary text-uppercase" href="">Saber más<i class="fa fa-angle-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex">
+                        <i class="fa fa-2x fa-heart text-primary flex-shrink-0 mr-3"></i>
+                        <div>
+                            <h4 class="text-uppercase mb-3">Servicios</h4>
+                            <p>Brindamos una variedad de servicios para que tu experiencia sea la mejor.</p>
+                            <a class="text-primary text-uppercase" href="">Saber más<i class="fa fa-angle-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex">
+                        <i class="fa fa-2x fa-users text-primary flex-shrink-0 mr-3"></i>
+                        <div>
+                            <h4 class="text-uppercase mb-3">Nuestro equipo</h4>
+                            <p>Un equipo de profesionales siempre dispuesto a ayudarte en tu viaje.</p>
+                            <a class="text-primary text-uppercase" href="">Saber más<i class="fa fa-angle-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5">
         <div class="row pt-5">
-            <div class="col-lg-3 col-md-6 mb-5" style="margin-top: -0.7%;">
+            <div class="col-lg-3 col-md-6 mb-5">
                 <a href="" class="navbar-brand">
-                    <h1 class="text-primary"><span class="text-white">TURISMO <br>COSTA RICA</span></h1>
+                    <h1 class="text-primary"><span class="text-white">TRAVEL</span>ER</h1>
                 </a>
-                <p style="text-align: justify; margin-right: 11%;">
-                    Costa Rica ofrece <span class="verde">paisajes</span> impresionantes, 
-                    <span class="verde">biodiversidad</span> única, y 
-                    <span class="verde">experiencias inolvidables</span>. ¡Visítalo!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum vehicula tempor.</p>
+                <h6 class="text-uppercase text-white py-2">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="text-white-50 mr-3" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="text-white-50 mr-3" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-white-50 mr-3" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="text-white-50" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="text-uppercase text-white mb-4">Quick Links</h5>

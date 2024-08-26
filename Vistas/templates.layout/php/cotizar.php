@@ -30,6 +30,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cotización de Hoteles</title>
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="../../../CSS/estilos.css" type="text/css" />
 </head>
 <body>
@@ -60,29 +74,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
                 <a href="/Proyecto_MapaInteractivo/Vistas/templates/index.php" class="navbar-brand">
-                    <h1 id="title" class="m-0 text-primary text-dark">
-                        TURISMO COSTA RICA</h1>
+                    <h1 id="title" class="m-0 text-primary text-dark">TURISMO COSTA RICA</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
+                        <a href="../../templates.layout/Destination.html" class="nav-item nav-link">Destinos</a>
+                        <a href="../../templates.layout/php/cotizar.php" class="nav-item nav-link">Cotización</a>
+                        <a href="../../templates.layout/Administrador.php" class="nav-item nav-link">Administrador</a>
                         <a href="login.html" class="nav-item nav-link active">Login</a>
-                        <a href="../templates.layout/Destination.html" class="nav-item nav-link">Destinos</a>
-                        <a href="../templates.layout/Services.html" class="nav-item nav-link">Servicios</a>
-                        <a href="../templates.layout/php/cotizar.php" class="nav-item nav-link">Cotizacion</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Paginas</a>
-                            <div class="dropdown-menu border-0 rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Guia</a>
-                                <a href="single.html" class="dropdown-item">Lugares famosos</a>
-                                <a href="destination.html" class="dropdown-item">Destinos</a>
-                                <a href="guide.html" class="dropdown-item">Guias de viaje</a>
-                                <a href="testimonial.html" class="dropdown-item">Reseñas</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contacto</a>
                     </div>
                 </div>
             </nav>

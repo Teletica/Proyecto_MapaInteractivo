@@ -56,34 +56,21 @@
     <!-- Topbar End -->
 
 
-    <!-- Navbar Start -->
     <div class="container-fluid position-relative nav-bar p-0">
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
                 <a href="/Proyecto_MapaInteractivo/Vistas/templates/index.php" class="navbar-brand">
-                    <h1 id="title" class="m-0 text-primary text-dark">
-                        TURISMO COSTA RICA</h1>
+                    <h1 id="title" class="m-0 text-primary text-dark">TURISMO COSTA RICA</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
-                        <a href="login.html" class="nav-item nav-link active">Login</a>
                         <a href="../templates.layout/Destination.html" class="nav-item nav-link">Destinos</a>
-                        <a href="../templates.layout/Services.html" class="nav-item nav-link">Servicios</a>
-                        <a href="../templates.layout/Administrador.html" class="nav-item nav-link">Administrador</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Paginas</a>
-                            <div class="dropdown-menu border-0 rounded-0 m-0">
-                                <a href="blog.html" class="dropdown-item">Guia</a>
-                                <a href="single.html" class="dropdown-item">Lugares famosos</a>
-                                <a href="destination.html" class="dropdown-item">Destinos</a>
-                                <a href="guide.html" class="dropdown-item">Guias de viaje</a>
-                                <a href="testimonial.html" class="dropdown-item">Reseñas</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                        <a href="../templates.layout/php/cotizar.php" class="nav-item nav-link">Cotización</a>
+                        <a href="../templates.layout/Administrador.php" class="nav-item nav-link">Administrador</a>
+                        <a href="login.html" class="nav-item nav-link active">Login</a>
                     </div>
                 </div>
             </nav>
@@ -128,7 +115,7 @@
                             <th>ID</th>
                             <th>Nombre</th>
                             <th>Descripción</th>
-                            <th>ID del Cantón</th>
+                            <th>ID de la Provincia</th>
                             <th>Tipo</th>
                             <th></th>
                         </tr>
@@ -140,14 +127,14 @@
                                     <td><?php echo htmlspecialchars($atraccion['AtraccionID']); ?></td>
                                     <td><?php echo htmlspecialchars($atraccion['Nombre']); ?></td>
                                     <td><?php echo htmlspecialchars($atraccion['Descripcion']); ?></td>
-                                    <td><?php echo htmlspecialchars($atraccion['CantonID']); ?></td>
+                                    <td><?php echo htmlspecialchars($atraccion['ProvinciaID']); ?></td>
                                     <td><?php echo htmlspecialchars($atraccion['Tipo']); ?></td>
                                     <td>
                                         <form action="/Proyecto_MapaInteractivo/Controller/atracciones/AtraccionesEliminar.php" method="post" style="display:inline;">
                                             <input type="hidden" name="id" value="<?php echo htmlspecialchars($atraccion['AtraccionID']); ?>">
                                             <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                                         </form>
-                                        <button type="button" class="btn btn-warning btn-sm" onclick="editarAtraccion('<?php echo $atraccion['AtraccionID']; ?>', '<?php echo htmlspecialchars($atraccion['Nombre']); ?>', '<?php echo htmlspecialchars($atraccion['Descripcion']); ?>', '<?php echo htmlspecialchars($atraccion['CantonID']); ?>', '<?php echo htmlspecialchars($atraccion['Tipo']); ?>')">Modificar</button>
+                                        <button type="button" class="btn btn-warning btn-sm" onclick="editarAtraccion('<?php echo $atraccion['AtraccionID']; ?>', '<?php echo htmlspecialchars($atraccion['Nombre']); ?>', '<?php echo htmlspecialchars($atraccion['Descripcion']); ?>', '<?php echo htmlspecialchars($atraccion['ProvinciaID']); ?>', '<?php echo htmlspecialchars($atraccion['Tipo']); ?>')">Modificar</button>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
@@ -228,7 +215,7 @@
                                 <tr>
                                     <td><?php echo htmlspecialchars($canton['CantonID']); ?></td>
                                     <td><?php echo htmlspecialchars($canton['Nombre']); ?></td>
-                                    <td><?php echo htmlspecialchars($canton['ProvinicaID']); ?></td>
+                                    <td><?php echo htmlspecialchars($canton['ProvinciaID']); ?></td>
                                     <td><img src="<?php echo htmlspecialchars($canton['Img']); ?>" alt="Imagen del Cantón" style="max-width: 100px; max-height: 100px;"></td>
                                     <td><?php echo htmlspecialchars($canton['Descripcion']); ?></td>
                                     <td>
@@ -236,7 +223,7 @@
                                             <input type="hidden" name="id" value="<?php echo htmlspecialchars($canton['CantonID']); ?>">
                                             <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                                         </form>
-                                        <button type="button" class="btn btn-warning btn-sm" onclick="editarCanton('<?php echo $canton['CantonID']; ?>', '<?php echo htmlspecialchars($canton['Nombre']); ?>', '<?php echo htmlspecialchars($canton['ProvinicaID']); ?>', '<?php echo htmlspecialchars($canton['Img']); ?>', '<?php echo htmlspecialchars($canton['Descripcion']); ?>')">Modificar</button>
+                                        <button type="button" class="btn btn-warning btn-sm" onclick="editarCanton('<?php echo $canton['CantonID']; ?>', '<?php echo htmlspecialchars($canton['Nombre']); ?>', '<?php echo htmlspecialchars($canton['ProvinciaID']); ?>', '<?php echo htmlspecialchars($canton['Img']); ?>', '<?php echo htmlspecialchars($canton['Descripcion']); ?>')">Modificar</button>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

@@ -1,14 +1,44 @@
 <?php
-//include 'Proyecto_MapaInteractivo/Vistas/templates.layout/php/conexion.php';
+
+include '../templates.layout/php/conexion.php';
 
 date_default_timezone_set('America/Costa_Rica');
 $fecha_actual = date('d/m/Y H:i:s');
 
 if (isset($_GET['provincia'])) {
-    // Obtener la provincia
     $provincia = htmlspecialchars($_GET['provincia']);
+
+    // Consulta para obtener el nombre de la provincia
+    $query = "SELECT Nombre FROM provincias WHERE Nombre = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $provincia); // Cambiado a "s" para string
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $provinciaNombre = $row['Nombre'];
+    } else {
+        $provinciaNombre = 'Provincia no encontrada';
+    }
+
+    $stmt->close();
+
+    // Consulta para obtener los cantones correspondientes
+    $query_cantones = "SELECT Nombre, Img, Descripcion FROM cantones WHERE ProvinciaID = (SELECT ProvinciaID FROM provincias WHERE Nombre = ?)";
+    $stmt_cantones = $conn->prepare($query_cantones);
+    $stmt_cantones->bind_param('s', $provincia);
+    $stmt_cantones->execute();
+    $result_cantones = $stmt_cantones->get_result();
+
+    // Consulta para obtener los cantones correspondientes
+    $query_atracciones = "SELECT Nombre, Descripcion, Tipo, imagenAtraccion FROM atracciones WHERE CantonID IN (SELECT CantonID FROM cantones WHERE ProvinciaID = (SELECT ProvinciaID FROM provincias WHERE Nombre = ?))";
+    $stmt_atracciones = $conn->prepare($query_atracciones);
+    $stmt_atracciones->bind_param('s', $provincia);
+    $stmt_atracciones->execute();
+    $result_atracciones = $stmt_atracciones->get_result();
 } else {
-    $provincia = 'No se ha seleccionado ninguna provincia';
+    $provinciaNombre = 'No encontramos esa provincia, tal vez aún estamos trabajando en ella.';
 }
 ?>
 
@@ -17,7 +47,7 @@ if (isset($_GET['provincia'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title><?php echo $provincia ?></title>
+    <title><?php echo $provinciaNombre ?></title>
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -471,7 +501,7 @@ if (isset($_GET['provincia'])) {
     <button id="toggle-dark-mode"><i class="fas fa-solid fa-moon"></i></button>
 
     <header class="header_provincia" id="header_provincia">
-        <h1><?php echo $provincia ?></h1>
+        <h1><?php echo $provinciaNombre ?></h1>
         <div class="botones">
             <a class="boton-redondo" href="#cantones" title="Cantones">
                 <i class="fas fa-globe-americas"></i>
@@ -495,46 +525,25 @@ if (isset($_GET['provincia'])) {
         </div>
     </header>
 
-
-
-
-    <section class="section"  id="cantones">
+    <section class="section" id="cantones">
         <h2>CANTONES</h2>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="canton-card">
-                        <img src="/Proyecto_MapaInteractivo/Imgs/Heredia/parquecentraldeheredia.jpg"
-                            alt="Parque Central de Heredia" class="shrink-on-load">
-                        <div class="canton-content">
-                            <h3>Heredia</h3>
-                            <p>Conocida como la "Ciudad de las Flores", Heredia es el cantón central que alberga la
-                                mayoría de los edificios históricos de la provincia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="canton-card">
-                        <img src="/Proyecto_MapaInteractivo/Imgs/Heredia/fiestasdebarvadeheredia.jpg" alt="Barva"
-                            class="shrink shrink-on-load">
-                        <div class="canton-content">
-                            <h3>Barva</h3>
-                            <p>Famoso por su cultura colonial y sus celebraciones tradicionales, Barva es un destino
-                                popular para los amantes de la historia y el folclore costarricense.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="canton-card">
-                        <img src="/Proyecto_MapaInteractivo/Imgs/Heredia/sanrafa-Heredia.jpeg" alt="San Rafael"
-                            class="shrink-on-load">
-                        <div class="canton-content">
-                            <h3>San Rafael</h3>
-                            <p>Conocido por sus hermosas montañas y su cercanía a parques naturales, San Rafael es ideal
-                                para quienes buscan actividades al aire libre.</p>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                if ($result_cantones->num_rows > 0) {
+                    while ($row = $result_cantones->fetch_assoc()) {
+                        echo '<div class="col-md-4">';
+                        echo '<div class="canton-card">';
+                        echo '<img src="' . $row['Img'] . '" alt="' . $row['Nombre'] . '" class="shrink-on-load">';
+                        echo '<div class="canton-content">';
+                        echo '<h3>' . $row['Nombre'] . '</h3>';
+                        echo '<p>' . $row['Descripcion'] . '</p>';
+                        echo '</div></div></div>';
+                    }
+                } else {
+                    echo '<p>No hay cantones disponibles para esta provincia.</p>';
+                }
+                ?>
             </div>
         </div>
     </section>

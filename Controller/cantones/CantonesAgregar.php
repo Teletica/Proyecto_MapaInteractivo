@@ -1,12 +1,12 @@
 <?php
-include 'conexion.php';
-include 'metodos.php';
+include '../conexion.php';
+include '../metodos.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $canton_id = $_POST['canton_id'];
+    $canton_id = $_POST['id'];
     $nombre = $_POST['nombre'];
     $provincia_id = $_POST['provincia_id'];
-    $img = $_POST['img'];
+    $img = $_POST['imagen'];
     $descripcion = $_POST['descripcion'];
 
     $datos = array(
@@ -18,6 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 
     agregarRegistro('cantones', $datos);
+    echo '<meta http-equiv="refresh" content="0;url=' . $_SERVER['HTTP_REFERER'] . '">';
+
 
     $conn->close();
 }

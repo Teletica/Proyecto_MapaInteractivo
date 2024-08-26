@@ -1,6 +1,6 @@
 <?php
-include 'conexion.php';
-include 'metodos.php';
+include '../conexion.php';
+include '../metodos.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id'];
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'Tipo' => $tipo
     );
 
-    modificarRegistro('atracciones', $datos, 'id', $id);
+    modificarRegistro('atracciones', $datos, 'AtraccionID', $id);
 
     $conn->close();
     echo '<meta http-equiv="refresh" content="0;url=' . $_SERVER['HTTP_REFERER'] . '">';

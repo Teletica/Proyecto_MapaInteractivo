@@ -1,12 +1,12 @@
 <?php
-include 'conexion.php';
-include 'metodos.php';
+include '../conexion.php';
+include '../metodos.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $restaurante_id = $_POST['restaurante_id'];
+    $restaurante_id = $_POST['id'];
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
-    $canton_id = $_POST['canton_id'];
+    $canton_id = $_POST['canton'];
     $tipo = $_POST['tipo'];
 
     $datos = array(
@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 
     modificarRegistro('restaurantes', $datos, 'RestauranteID', $restaurante_id);
+    echo '<meta http-equiv="refresh" content="0;url=' . $_SERVER['HTTP_REFERER'] . '">';
 
     $conn->close();
 }

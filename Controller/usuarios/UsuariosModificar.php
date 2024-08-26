@@ -1,9 +1,9 @@
 <?php
-include 'conexion.php';
-include 'metodos.php';
+include '../conexion.php';
+include '../metodos.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usuario_id = $_POST['usuario_id'];
+    $usuario_id = $_POST['id'];
     $nombre = $_POST['nombre'];
     $correo = $_POST['correo'];
     $contraseña = $_POST['contraseña'];
@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 
     modificarRegistro('usuarios', $datos, 'UsuarioID', $usuario_id);
+    echo '<meta http-equiv="refresh" content="0;url=' . $_SERVER['HTTP_REFERER'] . '">';
 
     $conn->close();
 }

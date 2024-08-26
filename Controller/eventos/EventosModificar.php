@@ -1,9 +1,9 @@
 <?php
-include 'conexion.php';
-include 'metodos.php';
+include '../conexion.php';
+include '../metodos.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $evento_id = $_POST['evento_id'];
+    $evento_id = $_POST['id'];
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
     $fecha_inicio = $_POST['fecha_inicio'];
@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 
     modificarRegistro('eventos', $datos, 'EventoID', $evento_id);
+    echo '<meta http-equiv="refresh" content="0;url=' . $_SERVER['HTTP_REFERER'] . '">';
 
     $conn->close();
 }

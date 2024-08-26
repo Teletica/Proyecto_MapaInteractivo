@@ -32,7 +32,7 @@ if (isset($_GET['provincia'])) {
     $result_cantones = $stmt_cantones->get_result();
 
     // Consulta para obtener los cantones correspondientes
-    $query_atracciones = "SELECT Nombre, Descripcion, Tipo, imagenAtraccion FROM atracciones WHERE CantonID IN (SELECT CantonID FROM cantones WHERE ProvinciaID = (SELECT ProvinciaID FROM provincias WHERE Nombre = ?))";
+    $query_atracciones = "SELECT Nombre, Descripcion, Tipo, imagenAtraccion FROM atracciones WHERE ProvinciaID IN (SELECT ProvinciaID FROM cantones WHERE ProvinciaID = (SELECT ProvinciaID FROM provincias WHERE Nombre = ?))";
     $stmt_atracciones = $conn->prepare($query_atracciones);
     $stmt_atracciones->bind_param('s', $provincia);
     $stmt_atracciones->execute();
@@ -550,44 +550,28 @@ if (isset($_GET['provincia'])) {
 
     <!--  sección de Lugares Turísticos  -->
     <section class="section section-green" id="lugares-turisticos">
-        <h2>LUGARES TURÍSTICOS</h2>
+    <h2>ATRACCIONES</h2>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="canton-card">
-                        <img src="/Proyecto_MapaInteractivo/Imgs/Heredia/volcan-barva.jpg" alt="Volcán Barva"
-                            class="shrink-on-load">
-                        <div class="canton-content">
-                            <h3>Volcán Barva</h3>
-                            <p>Ubicado en el Parque Nacional Braulio Carrillo, el Volcán Barva ofrece vistas
-                                espectaculares y es ideal para hacer senderismo.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="canton-card">
-                        <img src="/Proyecto_MapaInteractivo/Imgs/Heredia/catarata-la-paz.jpg" alt="Catarata La Paz"
-                            class="shrink-on-load">
-                        <div class="canton-content">
-                            <h3>Catarata La Paz</h3>
-                            <p>Un impresionante salto de agua rodeado de selva tropical, perfecto para los amantes de la
-                                naturaleza y la fotografía.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="canton-card">
-                        <img src="/Proyecto_MapaInteractivo/Imgs/Heredia/jardin-lankester.jpg"
-                            alt="Jardín Botánico Lankester" class="shrink-on-load">
-                        <div class="canton-content">
-                            <h3>Jardín Botánico Lankester</h3>
-                            <p>Este jardín botánico es famoso por su colección de orquídeas y plantas exóticas, un lugar
-                                ideal para los botánicos y amantes de la naturaleza.</p>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                if ($result_atracciones->num_rows > 0) {
+                    while ($row = $result_atracciones->fetch_assoc()) {
+                        echo '<div class="col-md-4">';
+                        echo '<div class="canton-card">';
+                        echo '<img src="' . $row['imagenAtraccion'] . '" alt="' . $row['Nombre'] . '" class="shrink-on-load">';
+                        echo '<div class="canton-content">';
+                        echo '<h3>' . $row['Nombre'] . '</h3>';
+                        echo '<p>' . $row['Descripcion'] . '</p>';
+                        echo '<p><strong>Tipo:</strong> ' . $row['Tipo'] . '</p>';
+                        echo '</div></div></div>';
+                    }
+                } else {
+                    echo '<p>No hay atracciones disponibles para esta provincia.</p>';
+                }
+                ?>
             </div>
         </div>
+    </section>
     </section>
 
 

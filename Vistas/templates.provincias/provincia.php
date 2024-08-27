@@ -591,76 +591,71 @@ if (isset($_GET['provincia'])) {
 
     <!--  sección de Comida Típica  -->
     <section class="section section-wheat" id="comida-tipica">
-    <h2>COMIDA TÍPICA</h2>
-    <div class="container">
-        <div class="row">
-            <?php
-            // Verifica si la provincia está definida
-            if (isset($provincia)) {
+        <h2>COMIDA TÍPICA</h2>
+        <div class="container">
+            <div class="row">
+                <?php
+                // Verifica si la provincia está definida
+                if (isset($provincia)) {
 
-                if ($result_restaurantes->num_rows > 0) {
-                    while ($row = $result_restaurantes->fetch_assoc()) {
-                        echo '<div class="col-md-4">';
-                        echo '<div class="canton-card">';
-                        echo '<img src="' . $row['Imagen_comida'] . '" alt="' . $row['Nombre'] . '" class="shrink-on-load">';
-                        echo '<div class="canton-content">';
-                        echo '<h3>' . $row['Nombre'] . '</h3>';
-                        echo '<p>' . $row['Descripcion'] . '</p>';
-                        echo '</div></div></div>';
+                    if ($result_restaurantes->num_rows > 0) {
+                        while ($row = $result_restaurantes->fetch_assoc()) {
+                            echo '<div class="col-md-4">';
+                            echo '<div class="canton-card">';
+                            echo '<img src="' . $row['Imagen_comida'] . '" alt="' . $row['Nombre'] . '" class="shrink-on-load">';
+                            echo '<div class="canton-content">';
+                            echo '<h3>' . $row['Nombre'] . '</h3>';
+                            echo '<p>' . $row['Descripcion'] . '</p>';
+                            echo '</div></div></div>';
+                        }
+                    } else {
+                        echo '<p>No hay restaurantes de comida típica disponibles en esta provincia.</p>';
                     }
                 } else {
-                    echo '<p>No hay restaurantes de comida típica disponibles en esta provincia.</p>';
+                    echo '<p>Provincia no definida.</p>';
                 }
-            } else {
-                echo '<p>Provincia no definida.</p>';
-            }
-            ?>
+                ?>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-<section class="section section-green" id="cultura">
-    <h2>CULTURA</h2>
-    <div class="container">
-        <div class="row">
-            <?php
-            // Verifica si la provincia está definida
-            if (isset($provincia)) {
+    <section class="section section-green" id="cultura">
+        <h2>CULTURA</h2>
+        <div class="container">
+            <div class="row">
+                <?php
+                // Verifica si la provincia está definida
+                if (isset($provincia)) {
 
 
-                if ($result_cultura->num_rows > 0) {
-                    while ($row = $result_cultura->fetch_assoc()) {
-                        echo '<div class="col-md-4">';
-                        echo '<div class="canton-card">';
-                        // Aquí puedes añadir una imagen específica para cada costumbre si tienes esa información.
-                        echo '<img src="/ruta/a/imagen/default.jpg" alt="' . $row['Nombre'] . '" class="shrink-on-load">'; // Cambia la ruta si tienes imágenes específicas.
-                        echo '<div class="canton-content">';
-                        echo '<h3>' . $row['Nombre'] . '</h3>';
-                        echo '<p>' . $row['Descripcion'] . '</p>';
-                        echo '<p><strong>Grupo Étnico:</strong> ' . $row['GrupoEtnico'] . '</p>';
-                        echo '</div></div></div>';
+                    if ($result_cultura->num_rows > 0) {
+                        while ($row = $result_cultura->fetch_assoc()) {
+                            echo '<div class="col-md-4">';
+                            echo '<div class="canton-card">';
+                            // Aquí puedes añadir una imagen específica para cada costumbre si tienes esa información.
+                            echo '<img src="/ruta/a/imagen/default.jpg" alt="' . $row['Nombre'] . '" class="shrink-on-load">'; // Cambia la ruta si tienes imágenes específicas.
+                            echo '<div class="canton-content">';
+                            echo '<h3>' . $row['Nombre'] . '</h3>';
+                            echo '<p>' . $row['Descripcion'] . '</p>';
+                            echo '<p><strong>Grupo Étnico:</strong> ' . $row['GrupoEtnico'] . '</p>';
+                            echo '</div></div></div>';
+                        }
+                    } else {
+                        echo '<p>No hay costumbres indígenas disponibles en esta provincia.</p>';
                     }
                 } else {
-                    echo '<p>No hay costumbres indígenas disponibles en esta provincia.</p>';
+                    echo '<p>Provincia no definida.</p>';
                 }
-            } else {
-                echo '<p>Provincia no definida.</p>';
-            }
-            ?>
+                ?>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <a href="http://localhost/Proyecto_MapaInteractivo/Vistas/templates/" class="back-button" title="Regresar">
         <i class="fas fa-arrow-left"></i>
-    </a>
-
-
-
-
-
+    </a>    
 </body>
 
 
@@ -670,7 +665,7 @@ if (isset($_GET['provincia'])) {
     <div style="max-width: 1200px; margin: 0 auto;">
         <!-- Logo -->
         <div style="margin-bottom: 20px;">
-            <img src="/Proyecto_MapaInteractivo/Imgs/Heredia/costarica.png" alt="Costa Rica Logo"
+            <img src="/Proyecto_MapaInteractivo/Imgs/costarica.png" alt="Costa Rica Logo"
                 style="max-width: 150px;">
         </div>
 

@@ -624,7 +624,7 @@
                                             <input type="hidden" name="id" value="<?php echo htmlspecialchars($restaurante['RestauranteID']); ?>">
                                             <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                                         </form>
-                                        <button type="button" class="btn btn-warning btn-sm" onclick="editarRestaurante('<?php echo $restaurante['RestauranteID']; ?>', '<?php echo htmlspecialchars($restaurante['Nombre']); ?>', '<?php echo htmlspecialchars($restaurante['Descripcion']); ?>', '<?php echo htmlspecialchars($restaurante['CantonID']); ?>', '<?php echo htmlspecialchars($restaurante['Tipo']); ?>')">Modificar</button>
+                                        <button type="button" class="btn btn-warning btn-sm" onclick="editarRestaurante('<?php echo $restaurante['RestauranteID']; ?>', '<?php echo htmlspecialchars($restaurante['Nombre']); ?>', '<?php echo htmlspecialchars($restaurante['Descripcion']); ?>', '<?php echo htmlspecialchars($restaurante['ProvinciaID']); ?>', '<?php echo htmlspecialchars($restaurante['Tipo']); ?>')">Modificar</button>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

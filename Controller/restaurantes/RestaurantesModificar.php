@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $datos = array(
         'Nombre' => $nombre,
         'Descripcion' => $descripcion,
-        'CantonID' => $canton_id,
+        'ProvinciaID' => $canton_id,
         'Tipo' => $tipo
     );
 

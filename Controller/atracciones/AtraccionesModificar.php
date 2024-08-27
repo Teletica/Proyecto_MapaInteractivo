@@ -6,13 +6,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id'];
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
-    $canton_id = $_POST['canton_id'];
+    $provincia_id = $_POST['canton_id'];
     $tipo = $_POST['tipo'];
 
     $datos = array(
         'Nombre' => $nombre,
         'Descripcion' => $descripcion,
-        'CantonID' => $canton_id,
+        'ProvinciaID' => $canton_id,
         'Tipo' => $tipo
     );
 

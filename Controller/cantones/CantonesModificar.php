@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $datos = array(
         'Nombre' => $nombre,
-        'ProvinicaID' => $provincia_id,
+        'ProvinciaID' => $provincia_id,
         'Img' => $img,
         'Descripcion' => $descripcion
     );

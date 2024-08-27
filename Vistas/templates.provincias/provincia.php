@@ -44,6 +44,12 @@ if (isset($_GET['provincia'])) {
     $stmt_restaurantes->execute();
     $result_restaurantes = $stmt_restaurantes->get_result();
 
+    $query_cultura = "SELECT Nombre, Descripcion, GrupoEtnico FROM CostumbresIndigenas WHERE ProvinciaID = (SELECT ProvinciaID FROM provincias WHERE Nombre = ?)";
+    $stmt_cultura = $conn->prepare($query_cultura);
+    $stmt_cultura->bind_param('s', $provincia);
+    $stmt_cultura->execute();
+    $result_cultura = $stmt_cultura->get_result();
+
 
 } else {
     $provinciaNombre = 'No encontramos esa provincia, tal vez aún estamos trabajando en ella.';
@@ -614,65 +620,38 @@ if (isset($_GET['provincia'])) {
 </section>
 
 
-    <section class="section section-green" id="cultura">
-        <h2>CULTURA</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="canton-card">
-                        <img src="/Proyecto_MapaInteractivo/Imgs/Heredia/Club-Sport-Herediano.jpeg"
-                            alt="Donde Papa Restaurant" class="shrink-on-load">
-                        <div class="canton-content">
-                            <h3>Club Sport Herediano</h3>
-                            <p>El Club Sport Herediano, fundado el 12 de junio de 1921,
-                                es uno de los equipos más históricos y exitosos del fútbol costarricense,
-                                conocido por ser el primer campeón nacional en 1921. Con sede en Heredia y apodado
-                                "El Team", ha ganado 29 títulos de liga y posee su propio estadio, el Eladio Rosabal
-                                Cordero.
-                                A lo largo de su historia, ha sido cuna de grandes jugadores y ha mantenido intensas
-                                rivalidades
-                                con otros clubes, como Saprissa y Alajuelense. La afición herediana es apasionada y
-                                leal, y el club también
-                                está comprometido con iniciativas sociales en su comunidad.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="canton-card">
-                        <img src="/Proyecto_MapaInteractivo/Imgs/Heredia/Feria-de-la-mascaradas.jpg"
-                            alt="Barva de Heredia Comida Callejera XL" class="shrink-on-load">
-                        <div class="canton-content">
-                            <h3>Fiestas Patronales</h3>
-                            <p>En la provincia de Heredia, las fiestas patronales son una expresión vibrante de la
-                                identidad local, celebradas con fervor en cantones como Barva, Santo Domingo y San
-                                Joaquín. Estas festividades rinden homenaje a los santos patronos con actividades que
-                                incluyen procesiones religiosas, desfiles, música tradicional, bailes folclóricos y
-                                ferias populares. Cada comunidad se une en estos eventos que refuerzan los lazos
-                                sociales y preservan las tradiciones ancestrales, convirtiéndose en momentos de
-                                encuentro y celebración que reflejan el orgullo y la devoción de los heredianos por su
-                                patrimonio cultural.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="canton-card">
-                        <img src="/Proyecto_MapaInteractivo/Imgs/Heredia/sanrafa-Heredia.jpeg" alt="San Rafael"
-                            class="shrink-on-load">
-                        <div class="canton-content">
-                            <h3>Procesión de la Virgen de los Ángeles</h3>
-                            <p>La procesión de la Virgen de los Ángeles en San Rafael de Heredia, celebrada cada 2 de
-                                agosto, es una de las tradiciones religiosas más importantes de la provincia. La
-                                "Negrita", patrona de Costa Rica, es llevada en andas por las calles del distrito,
-                                acompañada de rezos, cantos y la devoción de cientos de fieles. Esta manifestación de fe
-                                refuerza los lazos comunitarios y espirituales, convirtiéndose en un evento central para
-                                los heredianos. Además de la procesión, se realizan misas y actividades culturales que
-                                reflejan la profunda devoción mariana en la región y en todo el país.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="section section-green" id="cultura">
+    <h2>CULTURA</h2>
+    <div class="container">
+        <div class="row">
+            <?php
+            // Verifica si la provincia está definida
+            if (isset($provincia)) {
+
+
+                if ($result_cultura->num_rows > 0) {
+                    while ($row = $result_cultura->fetch_assoc()) {
+                        echo '<div class="col-md-4">';
+                        echo '<div class="canton-card">';
+                        // Aquí puedes añadir una imagen específica para cada costumbre si tienes esa información.
+                        echo '<img src="/ruta/a/imagen/default.jpg" alt="' . $row['Nombre'] . '" class="shrink-on-load">'; // Cambia la ruta si tienes imágenes específicas.
+                        echo '<div class="canton-content">';
+                        echo '<h3>' . $row['Nombre'] . '</h3>';
+                        echo '<p>' . $row['Descripcion'] . '</p>';
+                        echo '<p><strong>Grupo Étnico:</strong> ' . $row['GrupoEtnico'] . '</p>';
+                        echo '</div></div></div>';
+                    }
+                } else {
+                    echo '<p>No hay costumbres indígenas disponibles en esta provincia.</p>';
+                }
+            } else {
+                echo '<p>Provincia no definida.</p>';
+            }
+            ?>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <a href="http://localhost/Proyecto_MapaInteractivo/Vistas/templates/" class="back-button" title="Regresar">
         <i class="fas fa-arrow-left"></i>
